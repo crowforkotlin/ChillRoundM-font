@@ -1,0 +1,24 @@
+Open($1)
+
+# 加粗字形
+SelectAll()
+ChangeWeight(20)
+
+# 修复轮廓
+SelectAll()
+RemoveOverlap()
+CorrectDirection()
+
+# 设置字体名称
+SetFontNames("ChillRoundM-SemiBold","ChillRoundM SemiBold","ChillRoundM SemiBold","SemiBold")
+
+# 设置 OS/2 Weight Class = 600
+SetOS2Value("Weight",600)
+
+# 设置 Style Map
+SetOS2Value("StyleMap",0x40)
+
+# 输出
+Generate($2)
+
+Close()
